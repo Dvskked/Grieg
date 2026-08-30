@@ -1,0 +1,18 @@
+{
+  "name": "grieg-crawler",
+  "version": "1.0.0",
+  "description": "Grieg: La Sombra del Olimpo — nueva arquitectura Top-Down Action-RPG / Dungeon Crawler.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "smoke:boot": "cross-env SMOKE=1 electron .",
+    "smoke:selftest": "cross-env SMOKE=2 electron .",
+    "smoke:drive": "cross-env SMOKE=3 electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^31.0.0"
+  }
+}

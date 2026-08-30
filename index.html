@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:" />
+  <title>Grieg: La Sombra del Olimpo — Mazmorra</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="stage">
+    <canvas id="game" width="1280" height="720"></canvas>
+
+    <div id="pauseOverlay" hidden>
+      <div id="pausePanel">
+        <h2>PAUSA</h2>
+        <p class="pause-sub">La penumbra se detiene… pero los esbirros no esperan.</p>
+        <button data-pause="resume">Reanudar</button>
+        <button data-pause="menu">Salir al Menú</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/Utils.js"></script>
+  <script src="js/Map.js"></script>
+  <script src="js/InputHandler.js"></script>
+  <script src="js/Particles.js"></script>
+  <script src="js/Player.js"></script>
+  <script src="js/Enemy.js"></script>
+  <script src="js/Boss.js"></script>
+  <script src="js/QuestManager.js"></script>
+  <script src="js/Game.js"></script>
+  <script src="js/boot.js"></script>
+</body>
+</html>

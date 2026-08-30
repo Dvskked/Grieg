@@ -1,0 +1,85 @@
+/* styles.css — Pantalla completa, canvas centrado sin deformacion, overlay de pausa. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #05060a;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #05060a;
+}
+
+#game {
+  display: block;
+  background: #05060a;
+  box-shadow: 0 0 80px rgba(80, 40, 180, 0.22);
+  image-rendering: pixelated;
+}
+
+[hidden] { display: none !important; }
+
+/* ---- Overlay de pausa (DOM, no bloquea el bucle) ---- */
+#pauseOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, rgba(18, 15, 35, 0.86) 0%, rgba(3, 4, 10, 0.95) 75%);
+  z-index: 20;
+}
+
+#pausePanel {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #efe8d6;
+}
+
+#pausePanel h2 {
+  font-size: 46px;
+  letter-spacing: 12px;
+  color: #ffd97a;
+  text-shadow: 0 0 26px rgba(255, 217, 122, 0.35);
+  margin-bottom: 8px;
+}
+
+.pause-sub {
+  font-family: monospace;
+  letter-spacing: 1px;
+  color: #8f8aa5;
+  margin-bottom: 26px;
+  font-size: 13px;
+}
+
+#pausePanel button {
+  display: block;
+  width: 320px;
+  margin: 12px auto;
+  padding: 15px 0;
+  background: rgba(255, 217, 122, 0.06);
+  border: 1px solid rgba(255, 217, 122, 0.4);
+  border-radius: 8px;
+  color: #e8e3d2;
+  font: 21px Georgia, "Times New Roman", serif;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+#pausePanel button:hover {
+  background: rgba(255, 217, 122, 0.2);
+  color: #fff6d8;
+  transform: translateY(-1px);
+}
+
+#pausePanel button:active { transform: translateY(1px); }
